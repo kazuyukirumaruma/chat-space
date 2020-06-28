@@ -49,6 +49,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|group_name|string|null: false, unique: true|
 
 
 ## Association
