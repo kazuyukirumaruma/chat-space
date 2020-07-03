@@ -1,13 +1,15 @@
 .Side-bar
   .Side-bar__user-name
     .Side-bar__user-name__content
-      .Side-bar__user-name__content__name
-        masa
-      .Side-bar__user-name__content__icon
-        = link_to "#", class: "edit__btn" do
-          = icon('far', 'edit')
-        = link_to "#", class: "cog__btn" do
-          = icon('fas', 'cog')
+      %h3.Side-bar__user-name__content__name
+        = current_user.name
+      %ul.Side-bar__user-name__content__icon
+        %li.Side-bar__user-name__content__edit__btn
+          = link_to "#" do
+            = icon('far', 'edit')
+        %li.Side-bar__user-name__content__cog__btn
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
 
   .Side-bar__group-list
     .Side-bar__group-list__top
