@@ -81,6 +81,11 @@
       &__member-name {
         color: #999999;
         font-size: 12px;
+
+        .group-name {
+          display: flex;
+        }
+
       }
       
     }
@@ -105,6 +110,7 @@
     height: calc(100vh - 100px - 90px);
     padding-top: 35px;
     padding-left: 40px;
+    overflow: scroll;
 
     &__info {
       display: flex;
@@ -144,7 +150,10 @@
     padding: 20px 40px;
     height: 90px;
 
-  
+    .Form {
+      display: flex;
+      width: 100%;
+    }
 
 
     .form__contents {
@@ -167,7 +176,7 @@
           line-height: 50px;
           font-size: 25px;
         }
-        .Hideen {
+        .Hidden {
           display: none;
         }
       }
