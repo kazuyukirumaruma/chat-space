@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-          `<div class="Chat-main__message-list__info">
+        `<div class="Chat-main__message-list__info" data-message-id=${message.id}>
             <div class="Chat-main__message-list__info__message-name">
               ${message.user_name}
             </div>
@@ -16,12 +16,11 @@ $(function(){
               ${message.content}
             </p>
             <img class="Message__image" src="${message.image}">
-          </div>
-        </div>`
+          </div>`
       return html;
     } else {
       let html =
-        `<div class="Chat-main__message-list__info">
+      `<div class="Chat-main__message-list__info" data-message-id=${message.id}>
           <div class="Chat-main__message-list__info__message-name">
             ${message.user_name}
           </div>
@@ -33,8 +32,7 @@ $(function(){
           <p class="Message__content">
             ${message.content}
           </p>
-        </div>
-      </div>`
+        </div>`
       return html;
     };
   }
